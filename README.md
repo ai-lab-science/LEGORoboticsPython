@@ -20,7 +20,7 @@ Python für Lego Mindstorm EV3
 * Einen EV3 mit einer microSD-Karte worauf das [Micropython Image](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installiert ist
 
 ## Verbindung herstellen
-Durch die EV3 MicroPython Erweiterung kann man mit dem EV3DEV Device Browser in Visual Studio Code eine Verbindung mit derm EV3 herstellen.
+Durch die EV3 MicroPython Erweiterung kann man mit dem EV3DEV Device Browser in Visual Studio Code eine Verbindung mit dem EV3 herstellen.
 
 <img src="Anleitungen/assets/ConnectGuide1.png" width="300">
 
@@ -38,7 +38,7 @@ Falls der EV3 weiterhin nicht automatisch erkannt wird, gehe in Visual Studio Co
 
 <img src="Anleitungen/assets/WLANGuide6.png" width="400">
 
-Die IP-Adresse wird in der oberen linken Ecke des Menüs angezeigt.
+Die IP-Adresse wird in der oberen, linken Ecke des Menüs angezeigt.
 
 <img src="Anleitungen/assets/WLANGuide8.png" width="150">
 
@@ -46,19 +46,43 @@ Die IP-Adresse wird in der oberen linken Ecke des Menüs angezeigt.
 Ein neues Projekt kann man erstellen, indem man auf die EV3 Erweiterung klickt und `Create a new project` auswählt.
 
 <img src="Anleitungen/assets/NewProject.png" width="400">
-In dem neu erstellten Project wird automatisch eine main.py Datei angelegt die alle wichtigen Klassen importiert und einen Piepton spielt. Wenn man sich also später keine Gedanken darüber machen möchte, welche Klassen man importiert kann man in jeder Klasse einfach wie in der main.py alles wichtige importieren:
+In dem neu erstellten Projekt wird automatisch eine main.py Datei angelegt die alle wichtigen Klassen importiert und einen Piepton spielt. Wenn man sich also später keine Gedanken darüber machen möchte welche Klassen man importiert, kann man in jeder Klasse einfach wie in der main.py alles Wichtige importieren:
 
-`from pybricks import ev3brick as brick
+```
+from pybricks import ev3brick as brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
 from pybricks.parameters import (Port, Stop, Direction, Button, Color,
                                  SoundFile, ImageFile, Align)
 from pybricks.tools import print, wait, StopWatch
-from pybricks.robotics import DriveBase`
+from pybricks.robotics import DriveBase 
+```
 
 In der ersten Zeile von jedem Python-Skript muss angegeben werden, welche Version von Python benutzt wird. In diesem Fall ist das also: 
 
-`#!/usr/bin/env pybricks-micropython`
+```#!/usr/bin/env pybricks-micropython```
+
+# Motoren
+Um einen Motor zu benutzen muss man zuerst ein Motor-Objekt erstellen und dabei den Port angeben. Für den Port C sieht das dann zum Beispiel so aus: `leftMotor = Motor(Port.C)`. Anschließend kann man mit der `run_target`-Methode den Motor um einen bestimmten Winkel drehen oder mit der `run`-Methode den Motor ohne Begrenzung laufen lassen. Um den Motor wieder anzuhalten, sollte man die `stop`-Methode benutzen.
+```
+#Motor auf Port C
+leftMotor = Motor(Port.C)
+
+# Mit einer Zielgeschwindigkeit von 300 Grad pro Sekunde den Motor um 90 Grad zum Ursprung drehen
+leftMotor.run_target(300,90)
+
+#Warte 2 Sekunden
+wait(2000)
+
+# Mit einer Zielgeschwindigkeit von 200 Grad pro Sekunde den Motor starten
+leftMotor.run(200)
+
+#Warte 2 Sekunden waehrend der Motor laeuft
+wait(5000)
+
+#Stoppe den Motor nach 5 Sekunden
+leftMotor.stop()
+```
 
 
 

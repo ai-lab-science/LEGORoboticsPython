@@ -34,7 +34,7 @@ Um den EV3 über WLAN zu verbinden muss der PC und der EV3 im gleichen Netzwerk 
 
 <img src="Anleitungen/assets/WLANGuide1.png" width="150"><img src="Anleitungen/assets/WLANGuide2.png" width="150"><img src="Anleitungen/assets/WLANGuide3.png" width="150"><img src="Anleitungen/assets/WLANGuide4.png" width="150"><img src="Anleitungen/assets/WLANGuide7.png" width="150">
 
-Falls der EV3 weiterhin nicht automatisch erkannt wird, gehe in Visual Studio auf `I don't see my device` und gebe anschließend einen Namen für die Verbindung und die IP-Adresse des EV3 an. 
+Falls der EV3 weiterhin nicht automatisch erkannt wird, gehe in Visual Studio Code auf `I don't see my device` und gebe anschließend einen Namen für die Verbindung und die IP-Adresse des EV3 an. 
 
 <img src="Anleitungen/assets/WLANGuide6.png" width="400">
 
@@ -42,7 +42,23 @@ Die IP-Adresse wird in der oberen linken Ecke des Menüs angezeigt.
 
 <img src="Anleitungen/assets/WLANGuide8.png" width="150">
 
+## Neues Projekt erstellen
+Ein neues Projekt kann man erstellen, indem man auf die EV3 Erweiterung klickt und `Create a new project` auswählt.
 
+<img src="Anleitungen/assets/NewProject.png" width="400">
+In dem neu erstellten Project wird automatisch eine main.py Datei angelegt die alle wichtigen Klassen importiert und einen Piepton spielt. Wenn man sich also später keine Gedanken darüber machen möchte, welche Klassen man importiert kann man in jeder Klasse einfach wie in der main.py alles wichtige importieren:
+
+`from pybricks import ev3brick as brick
+from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
+                                 InfraredSensor, UltrasonicSensor, GyroSensor)
+from pybricks.parameters import (Port, Stop, Direction, Button, Color,
+                                 SoundFile, ImageFile, Align)
+from pybricks.tools import print, wait, StopWatch
+from pybricks.robotics import DriveBase`
+
+In der ersten Zeile von jedem Python-Skript muss angegeben werden, welche Version von Python benutzt wird. In diesem Fall ist das also: 
+
+`#!/usr/bin/env pybricks-micropython`
 
 
 

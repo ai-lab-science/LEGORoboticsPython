@@ -3,6 +3,11 @@ Python für Lego Mindstorm EV3
 
 ## Inhalt
 * [Installation und Dokumentation](#Installation%20und%20Dokumentation)
+* [Voraussetzung](#Voraussetzung)
+* [Verbindung herstellen](#Verbindung%20herstellen)
+  * [USB](#USB)
+  * [WLAN](#WLAN)
+
 
 
 ## Installation und Dokumentation

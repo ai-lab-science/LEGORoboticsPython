@@ -21,13 +21,13 @@ Wenn der EV3 über USB verbunden ist, sollte er automatisch erkannt werden.
 <img src="Anleitungen/assets/ConnectGuide2.png" width="400">
 
 ### WLAN
-Um den EV3 über WLAN zu verbinden, muss der PC und der EV3 im gleichen Netzwerk sein. Auf dem EV3 kann man sich einfach über des Interface verbinden:
+Um den EV3 über WLAN zu verbinden muss der PC und der EV3 im gleichen Netzwerk sein. Auf dem EV3 kann man sich einfach über das Interface verbinden:
 
-<img src="Anleitungen/assets/WLANGuide1.png" width="150"><img src="Anleitungen/assets/WLANGuide2.png" width="150"><img src="Anleitungen/assets/WLANGuide3.png" width="150"><img src="Anleitungen/assets/WLANGuide4.png" width="150"><img src="Anleitungen/assets/WLANGuide5.png" width="150"><img src="Anleitungen/assets/WLANGuide7.png" width="150">
+<img src="Anleitungen/assets/WLANGuide1.png" width="150"><img src="Anleitungen/assets/WLANGuide2.png" width="150"><img src="Anleitungen/assets/WLANGuide3.png" width="150"><img src="Anleitungen/assets/WLANGuide4.png" width="150"><img src="Anleitungen/assets/WLANGuide7.png" width="150">
 
-Falls der EV3 weiterhin nicht automatisch erkannt wird, wähle 'I don't see my device' und gebe anschließend einen Namen für die Verbindung und die IP-Adresse des EV3 an. 
+Falls der EV3 weiterhin nicht automatisch erkannt wird, gehe in Visual Studio auf `I don't see my device` und gebe anschließend einen Namen für die Verbindung und die IP-Adresse des EV3 an. 
 
-<img src="Anleitungen/assets/WLANGuide6.png" width="150">
+<img src="Anleitungen/assets/WLANGuide6.png" width="400">
 
 Die IP-Adresse wird in der oberen linken Ecke des Menüs angezeigt.
 

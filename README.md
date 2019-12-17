@@ -21,4 +21,4 @@ Wenn der EV3 über USB verbunden ist, sollte er automatisch erkannt werden.
 <img src="Anleitungen/assets/ConnectGuide2.png" width="400">
 
 ### WLAN
-Um den EV3 über WLAN zu verbinden, müssen der PC und der EV3 im gleichen Netzwerk sein.
+Um den EV3 über WLAN zu verbinden, muss der PC und der EV3 im gleichen Netzwerk sein.

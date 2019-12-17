@@ -6,15 +6,19 @@ Python für Lego Mindstorm EV3
 
 [Einführungspräsentation](https://docs.google.com/presentation/d/1aI6rTUCZh44TUXAJdzgp6wt7Sxh3pLjRxMZmbWnKNWI/edit?usp=sharing)
 
-## Vorraussetzung
+## Voraussetzung
 * Visual Studio Code mit der Erweiterung [LEGO® MINDSTORMS® EV3 MicroPython](https://marketplace.visualstudio.com/items?itemName=lego-education.ev3-micropython)
 * Einen EV3 mit einer microSD-Karte worauf das [Micropython Image](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installiert ist
 
 ## Verbindung herstellen
 Durch die EV3 MicroPython Erweiterung kann man mit dem EV3DEV Device Browser in Visual Studio Code eine Verbindung mit derm EV3 herstellen.
 
-![Connect Guide](Anleitungen/assets/ConnectGuide1.png)
+<img src="Anleitungen/assets/ConnectGuide1.png" width="300">
 
+### USB
 Wenn der EV3 über USB verbunden ist, sollte er automatisch erkannt werden.
 
-![Connect Guide 2](Anleitungen/assets/ConnectGuide2.png)
+<img src="Anleitungen/assets/ConnectGuide2.png" width="400">
+
+### WLAN
+Um den EV3 über WLAN zu verbinden, müssen der PC und der EV3 im gleichen Netzwerk sein.

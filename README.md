@@ -45,7 +45,7 @@ Die IP-Adresse wird in der oberen, linken Ecke des Menüs angezeigt.
 ## Neues Projekt erstellen
 Ein neues Projekt kann man erstellen, indem man auf die EV3 Erweiterung klickt und `Create a new project` auswählt.
 
-<img src="Anleitungen/assets/NewProject.png" width="400">
+<img src="Anleitungen/assets/NewProject.png" width="200">
 In dem neu erstellten Projekt wird automatisch eine main.py Datei angelegt die alle wichtigen Klassen importiert und einen Piepton spielt. Wenn man sich also später keine Gedanken darüber machen möchte welche Klassen man importiert, kann man in jeder Klasse einfach wie in der main.py alles Wichtige importieren:
 
 ```

@@ -62,6 +62,23 @@ In der ersten Zeile von jedem Python-Skript muss angegeben werden, welche Versio
 
 ```#!/usr/bin/env pybricks-micropython```
 
+# Programm ausführen
+Wenn der EV3 über USB oder WLAN verbunden ist, kann das Programm oben unter Debug -> Start Debugging ausgeführt werden (Alternativ F5).
+Welche Datei ausgeführt wird, kann in /.vscode/launch.json festgelegt werden. Bei einem neuen Projekt wird dort standardmäßig main.py ausgeführt. 
+````
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Download and Run",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/Name_der_auszufuehrenden_Datei.py"
+		}
+	]
+}
+````
+
 # Motoren
 Um einen Motor zu benutzen muss man zuerst ein Motor-Objekt erstellen und dabei den Port angeben. Für den Port C sieht das dann zum Beispiel so aus: `leftMotor = Motor(Port.C)`. Anschließend kann man mit der `run_target`-Methode den Motor um einen bestimmten Winkel drehen oder mit der `run`-Methode den Motor ohne Begrenzung laufen lassen. Um den Motor wieder anzuhalten, sollte man die `stop`-Methode benutzen.
 ```
@@ -102,7 +119,7 @@ ultrasonicSensor =  UltrasonicSensor(Port.S1)
 d=ultrasonicSensor.distance()
 ````
 # Gyrosensor
-Der Gyrosensor kann einen Winkel oder eine Winkelgeschwindigkeit messen. Hierbei ist wichtig, dass die Ruhelage(0 Grad) sinnvoll festgelegt ist. Dafür gibt es die Funktion `reset_angle()`
+Der Gyrosensor kann einen Winkel oder eine Winkelgeschwindigkeit messen. Hierbei ist wichtig, dass die Ruhelage(0 Grad) sinnvoll festgelegt ist. Dafür gibt es die Funktion `reset_angle()`.
 ````
 #Gyro Sensor auf Port 4
 gyro = GyroSensor(Port.S4)
@@ -120,7 +137,7 @@ rot_speed = gyro.speed()
 # Farbsensor
 Der Farbsensor kann verwendet werden um Farben zu erkennen, die Lichtstärke zu messen oder die Stäre der Reflektion von Licht zu messen. 
 Bei der Farbmessung muss beachtet werden, dass die gemessene Oberfläche sehr nah vor dem Sensor sein muss. Es können folgende Farben gemessen werden: Color.BLACK, Color.BLUE, Color.GREEN, Color.YELLOW, Color.RED, 
-#Color.WHITE, Color.BROWN oder None
+#Color.WHITE, Color.BROWN oder None.
 ````
 #Farbsensor auf Port 1
 colorSensor =  ColorSensor(Port.S1)
@@ -141,7 +158,7 @@ amb_light = colorSensor.ambient()
 ````
 
 # Inertial Measurement Unit
-Die Inertial Measurement Unit (IMU) kann genauso wie das Gyroskop verwendet werden um Winkel und Winkelgeschwindigkeiten zu messen. Außerdem kann die IMU aber auch Beschleunigungsdaten messen. Da dies kein offizieller Sensor von Lego ist, muss das entsprechende Script aus dem Tools Ordner importiert werden. Wenn IMU.py nicht im gleichen Verzeichnis wie das ausgeführte Programm ist, sollte der Pfad über `sys.path.append()` hinzugefügt werden. Bei der Instanziierung muss festgelegt werden welcher Modus benutzt wird. Mögliche Modi sind:  TILT, ACCEL, COMPASS, MAG, GYRO. COMPASS ist der einzige Modus indem nur ein Messwert übergeben wird. Hier wird ähnlich wie beim Gyrosensor nur ein Winkel zwischen 0 und 360 Grad gemessen. Alle anderen Modi übergeben drei Messwerte. In TILT sind das die Winkel für X,Y und Z-Achse, in ACCEL die entsprechenden Beschleunigungsdaten, MAG misst das magnetische Feld und GYRO sind die Winkelgeschwindigkeiten. Mehr Informationen zu den Modi gibt es [hier](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-stretch/sensor_data.html)
+Die Inertial Measurement Unit (IMU) kann genauso wie das Gyroskop verwendet werden um Winkel und Winkelgeschwindigkeiten zu messen. Außerdem kann die IMU aber auch Beschleunigungsdaten messen. Da dies kein offizieller Sensor von Lego ist, muss das entsprechende Script aus dem Tools Ordner importiert werden. Wenn IMU.py nicht im gleichen Verzeichnis wie das ausgeführte Programm ist, sollte der Pfad über `sys.path.append()` hinzugefügt werden. Bei der Instanziierung muss festgelegt werden welcher Modus benutzt wird. Mögliche Modi sind:  TILT, ACCEL, COMPASS, MAG, GYRO. COMPASS ist der einzige Modus indem nur ein Messwert übergeben wird. Hier wird ähnlich wie beim Gyrosensor nur ein Winkel zwischen 0 und 360 Grad gemessen. Alle anderen Modi übergeben drei Messwerte. In TILT sind das die Winkel für X,Y und Z-Achse, in ACCEL die entsprechenden Beschleunigungsdaten, MAG misst das magnetische Feld und GYRO sind die Winkelgeschwindigkeiten. Mehr Informationen zu den Modi gibt es [hier](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-stretch/sensor_data.html).
 
 ````
 #Fuege den Tools Ordner zum PYTHONPATH hinzu. Nicht notwendig wenn IMU.py im selben Ordner ist

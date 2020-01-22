@@ -84,5 +84,81 @@ wait(5000)
 leftMotor.stop()
 ```
 
+# Berührungssensor
+````
+#Touchsensor auf Port 4
+touchSensor = TouchSensor(Port.S4)
+
+#Zustand des Berührungssensor lesen
+is_pressed = touchSensor.pressed()
+````
+
+# Ultraschallsensor
+````
+#Ultraschallsensor auf Port 1
+ultrasonicSensor =  UltrasonicSensor(Port.S1)
+
+#Gemessene Distanz lesen (in Millimeter)
+d=ultrasonicSensor.distance()
+````
+# Gyrosensor
+Der Gyrosensor kann einen Winkel oder eine Winkelgeschwindigkeit messen. Hierbei ist wichtig, dass die Ruhelage(0 Grad) sinnvoll festgelegt ist. Dafür gibt es die Funktion `reset_angle()`
+````
+#Gyro Sensor auf Port 4
+gyro = GyroSensor(Port.S4)
+
+#Aktuelle Position als Nullposition festlegen
+gyro.reset_angle(0)
+
+#aktuellen Winkel lesen
+rot = gyro.angle()
+
+#aktuelle Winkelgeschwindigkeit lesen
+rot_speed = gyro.speed()
+````
+
+# Farbsensor
+Der Farbsensor kann verwendet werden um Farben zu erkennen, die Lichtstärke zu messen oder die Stäre der Reflektion von Licht zu messen. 
+Bei der Farbmessung muss beachtet werden, dass die gemessene Oberfläche sehr nah vor dem Sensor sein muss. Es können folgende Farben gemessen werden: Color.BLACK, Color.BLUE, Color.GREEN, Color.YELLOW, Color.RED, 
+#Color.WHITE, Color.BROWN oder None
+````
+#Farbsensor auf Port 1
+colorSensor =  ColorSensor(Port.S1)
+
+#Lese aktuellen Farbwert
+color = colorSensor.color()
+
+#Reflektion eines roten Lichts auf einer Oberfläche
+reflection = colorSensor.reflection()
+
+
+
+#Prüfe ob der Sensor Rot gemessen hat
+if(color==Color.RED):
+    print("Rot")
+#Messe die Intensität des Umgebungslichts. (0 bis 100)
+amb_light = colorSensor.ambient()
+````
+
+# Inertial Measurement Unit
+Die Inertial Measurement Unit (IMU) kann genauso wie das Gyroskop verwendet werden um Winkel und Winkelgeschwindigkeiten zu messen. Außerdem kann die IMU aber auch Beschleunigungsdaten messen. Da dies kein offizieller Sensor von Lego ist, muss das entsprechende Script aus dem Tools Ordner importiert werden. Wenn IMU.py nicht im gleichen Verzeichnis wie das ausgeführte Programm ist, sollte der Pfad über `sys.path.append()` hinzugefügt werden. Bei der Instanziierung muss festgelegt werden welcher Modus benutzt wird. Mögliche Modi sind:  TILT, ACCEL, COMPASS, MAG, GYRO. COMPASS ist der einzige Modus indem nur ein Messwert übergeben wird. Hier wird ähnlich wie beim Gyrosensor nur ein Winkel zwischen 0 und 360 Grad gemessen. Alle anderen Modi übergeben drei Messwerte. In TILT sind das die Winkel für X,Y und Z-Achse, in ACCEL die entsprechenden Beschleunigungsdaten, MAG misst das magnetische Feld und GYRO sind die Winkelgeschwindigkeiten. Mehr Informationen zu den Modi gibt es [hier](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-stretch/sensor_data.html)
+
+````
+#Fuege den Tools Ordner zum PYTHONPATH hinzu. Nicht notwendig wenn IMU.py im selben Ordner ist
+import sys
+sys.path.append("/home/robot/LEGORoboticsPython/Tools")
+
+#Importiere IMU.py
+from IMU import IMU
+
+#Port und Mode des Seonsors festlegen. Moegliche Modes sind TILT, ACCEL, COMPASS, MAG, GYRO
+imu = IMU(Port.S3, 'GYRO')
+
+#Speichere die aktuellen Messdaten in result
+result = imu.angle()
+````
+
+
+
 
 

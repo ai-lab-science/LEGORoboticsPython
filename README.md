@@ -19,6 +19,10 @@ Python für Lego Mindstorm EV3
 * Visual Studio Code mit der Erweiterung [LEGO® MINDSTORMS® EV3 MicroPython](https://marketplace.visualstudio.com/items?itemName=lego-education.ev3-micropython)
 * Einen EV3 mit einer microSD-Karte worauf das [Micropython Image](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installiert ist
 
+## Visual Studio Code Interface
+<img src="Anleitungen/assets/Interface.png" width="300">
+
+
 ## Verbindung herstellen
 Durch die EV3 MicroPython Erweiterung kann man mit dem EV3DEV Device Browser in Visual Studio Code eine Verbindung mit dem EV3 herstellen.
 

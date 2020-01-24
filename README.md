@@ -9,6 +9,8 @@ Python für Lego Mindstorm EV3
   * [WLAN](#WLAN)
 
 
+## Arbeitsplan Praktikum
+[Arbeitsplan](https://docs.google.com/document/d/e/2PACX-1vRTPF6EI3NPntP9-wfKK2BqjbzqhgZljUnQAXWiBYso_J3kHYTvZ1trvV-K3ogpHGYAEFRPK_mBcCN5/pub)
 
 ## Installation und Dokumentation
 [Offizielle Anleitung](https://le-www-live-s.legocdn.com/sc/media/files/ev3-micropython/getting%20started%20with%20micropython_de-3619c654757bdefde79e650951c58d8a.pdf) (für zusätzliche Informationen)

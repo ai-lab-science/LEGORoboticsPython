@@ -10,6 +10,8 @@ Python für Lego Mindstorm EV3
   * [WLAN](#WLAN)
 * [Neues Projekt erstellen](#new_project)
 * [Programm ausführen](#execute_program)
+* [Konsolenausgabe](#Konsolenausgabe)
+* [Brick Funktionen](#other_functions)
 * [Motoren](#Motoren)
 * [Sensoren](#Sensoren)
   * [Berührungssensor](#Berührungssensor)
@@ -17,7 +19,6 @@ Python für Lego Mindstorm EV3
   * [Gyrosensor](#Gyrosensor)
   * [Farbsensor](#Farbsensor)
   * [Inertial Measurement Unit](#imu)
-* [Sonsige Funktionen](#other_functions)
 * [EV3 Boot Probleme](#boot_problems)
  
 

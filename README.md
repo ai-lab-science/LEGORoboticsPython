@@ -12,6 +12,11 @@ Python für Lego Mindstorm EV3
 * [Programm ausführen](#execute_program)
 * [Motoren](#Motoren)
 * [Sensoren](#Sensoren)
+  * [Berührungssensor](#Berührungssensor)
+  * [Ultraschallsensor](#Ultraschallsensor)
+  * [Gyrosensor](#Gyrosensor)
+  * [Farbsensor](#Farbsensor)
+  * [Inertial Measurement Unit](#imu)
  
 
   

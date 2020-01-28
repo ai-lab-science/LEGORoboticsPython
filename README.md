@@ -122,7 +122,7 @@ print("Ich bin "+str(alter)+" Jahre alt")
 
 <a name="other_functions"></a>
 ## Brick Funktionen
-Der EV3 verfügt über ein Display und einen Lautsprecher. Das ist ebenfalls sehr nützlich um auszugeben an welcher Stelle im Programm er sich gerade befindet. Am einfachsten lässt sich das Display über `display.text()` und der Lautsprecher über `sound.beep()` ansprechen. Die Tasten des EV3 sind sehr nützlich um beispielsweise das Programm zu beenden oder Parameter des Programms während der Laufzeit zu verändern. Die aktivierten Tasten kann man durch `brick.buttons()` bekommen. Mögliche Buttons sind: `LEFT_DOWN, DOWN, RIGHT_DOWN, LEFT, CENTER, RIGHT, LEFT_UP, UP, BEACON, RIGHT_UP`
+Der EV3 verfügt über ein Display und einen Lautsprecher. Das ist ebenfalls sehr nützlich um auszugeben an welcher Stelle im Programm er sich gerade befindet. Am einfachsten lässt sich das Display über `display.text()` und der Lautsprecher über `sound.beep()` ansprechen. Die Tasten des EV3 sind sehr nützlich um beispielsweise das Programm zu beenden oder Parameter des Programms während der Laufzeit zu verändern. Die aktivierten Tasten kann man durch `brick.buttons()` bekommen. Mögliche Buttons sind: `DOWN, LEFT, CENTER, RIGHT, UP`
 ````
 #Püfe ob der untere Button gedrückt wurde
 down_pressed = Button.DOWN in brick.buttons()

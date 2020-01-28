@@ -2,14 +2,14 @@
 Python für Lego Mindstorm EV3
 
 ## Inhalt
-* [Installation und Dokumentation](#Installation%20und%20Dokumentation)
+* [Installation und Dokumentation](#installation)
 * [Voraussetzung](#Voraussetzung)
-* [Visual Studio Code Interface](#Visual%20Studio%20Code%20Interface)
-* [Verbindung herstellen](#Verbindung%20herstellen)
+* [Visual Studio Code Interface](#vscode)
+* [Verbindung herstellen](#connection)
   * [USB](#USB)
   * [WLAN](#WLAN)
-* [Neues Projekt erstellen](#Neues%20Projekt%20erstellen)
-* [Programm ausführen](#Programm%20ausführen)
+* [Neues Projekt erstellen](#new_project)
+* [Programm ausführen](#execute_program)
 * [Motoren](#Motoren)
 * [Sensoren](#Sensoren)
  
@@ -20,6 +20,7 @@ Python für Lego Mindstorm EV3
 ## Arbeitsplan Praktikum
 [Arbeitsplan](https://docs.google.com/document/d/e/2PACX-1vRTPF6EI3NPntP9-wfKK2BqjbzqhgZljUnQAXWiBYso_J3kHYTvZ1trvV-K3ogpHGYAEFRPK_mBcCN5/pub)
 
+<a name="installation"></a>
 ## Installation und Dokumentation
 [Offizielle Anleitung](https://le-www-live-s.legocdn.com/sc/media/files/ev3-micropython/getting%20started%20with%20micropython_de-3619c654757bdefde79e650951c58d8a.pdf) (für zusätzliche Informationen)
 
@@ -29,10 +30,11 @@ Python für Lego Mindstorm EV3
 * Visual Studio Code mit der Erweiterung [LEGO® MINDSTORMS® EV3 MicroPython](https://marketplace.visualstudio.com/items?itemName=lego-education.ev3-micropython)
 * Einen EV3 mit einer microSD-Karte worauf das [Micropython Image](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installiert ist
 
+<a name="vscode"></a>
 ## Visual Studio Code Interface
 <img src="Anleitungen/assets/Interface.png" width="300">
 
-
+<a name="connection"></a>
 ## Verbindung herstellen
 Durch die EV3 MicroPython Erweiterung kann man mit dem EV3DEV Device Browser in Visual Studio Code eine Verbindung mit dem EV3 herstellen.
 
@@ -56,6 +58,7 @@ Die IP-Adresse wird in der oberen, linken Ecke des Menüs angezeigt.
 
 <img src="Anleitungen/assets/WLANGuide8.png" width="150">
 
+<a name="new_project"></a>
 ## Neues Projekt erstellen
 Ein neues Projekt kann man erstellen, indem man auf die EV3 Erweiterung klickt und `Create a new project` auswählt.
 
@@ -76,6 +79,7 @@ In der ersten Zeile von jedem Python-Skript muss angegeben werden, welche Versio
 
 ```#!/usr/bin/env pybricks-micropython```
 
+<a name="execute_program"></a>
 ## Programm ausführen
 Wenn der EV3 über USB oder WLAN verbunden ist, kann das Programm oben unter Debug -> Start Debugging ausgeführt werden (Alternativ F5).
 Welche Datei ausgeführt wird, kann in /.vscode/launch.json festgelegt werden. Bei einem neuen Projekt wird dort standardmäßig main.py ausgeführt. 
@@ -172,7 +176,7 @@ if(color==Color.RED):
 #Messe die Intensität des Umgebungslichts. (0 bis 100)
 amb_light = colorSensor.ambient()
 ````
-
+<a name="imu"></a>
 ### Inertial Measurement Unit
 Die Inertial Measurement Unit (IMU) kann genauso wie das Gyroskop verwendet werden um Winkel und Winkelgeschwindigkeiten zu messen. Außerdem kann die IMU aber auch Beschleunigungsdaten messen. Da dies kein offizieller Sensor von Lego ist, muss das entsprechende Script aus dem Tools Ordner importiert werden. Wenn IMU.py nicht im gleichen Verzeichnis wie das ausgeführte Programm ist, sollte der Pfad über `sys.path.append()` hinzugefügt werden. Bei der Instanziierung muss festgelegt werden welcher Modus benutzt wird. Mögliche Modi sind:  TILT, ACCEL, COMPASS, MAG, GYRO. COMPASS ist der einzige Modus indem nur ein Messwert übergeben wird. Hier wird ähnlich wie beim Gyrosensor nur ein Winkel zwischen 0 und 360 Grad gemessen. Alle anderen Modi übergeben drei Messwerte. In TILT sind das die Winkel für X,Y und Z-Achse, in ACCEL die entsprechenden Beschleunigungsdaten, MAG misst das magnetische Feld und GYRO sind die Winkelgeschwindigkeiten. Mehr Informationen zu den Modi gibt es [hier](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-stretch/sensor_data.html).
 

@@ -18,6 +18,7 @@ Python für Lego Mindstorm EV3
   * [Farbsensor](#Farbsensor)
   * [Inertial Measurement Unit](#imu)
 * [Sonsige Funktionen](#other_functions)
+* [EV3 Boot Probleme](#boot_problems)
  
 
   
@@ -220,5 +221,6 @@ brick.display.text("Hallo", (0, 50))
 # Stelle das Statuslicht auf Rot
 brick.light(Color.RED)
 ````
-
-
+<a name="boot_problems"></a>
+# EV3 Boot Probleme
+Manchmal bleibt der EV3 beim Starten hängen. Dies passiert vermutlich weil der Akku leer ist, also sollte der EV3 zunächst mit dem AUfladegerät verbunden werden. Dann muss die SD-Karte auf der linken Seite des Bricks entfernt werden. Hier ist das Betriebssystem was wir benutzen gespeichert und wenn wir diese entfernen wird wieder das Standardbetriebssystem benutzt. Um den EV3 jetzt neu zustarten muss die Mittlere- und die Zurück-Taste (oben links) gleichzeitig für mehrere Sekunden gedrückt werden. Nachdem der EV3 gestartet ist, kann er gleich wieder runtergefahren werden (Zurück-Taste). Dann kann die SD-Larte wieder eingesetzt werden und der EV3 sollte anschließend normal starten.

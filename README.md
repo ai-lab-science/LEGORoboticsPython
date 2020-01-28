@@ -108,19 +108,21 @@ Welche Datei ausgeführt wird, kann in /.vscode/launch.json festgelegt werden. B
 ## Konsolenausgabe
 Solange der EV3 mit dem Computer verbunden ist, lassen sich Konsolenausgaben machen. Dies ist sehr wichtig, da es ohne Zwischenausgaben sehr schwer ist zu erkennen an welcher Stelle im Programm der EV3 gerade ist. Dies funktioniert über `print`.
 ````
-# Gibt "hello world" in der Konsole aus. Die Anführungszeichen sind notwendig um zu Kennzeichnen, dass es sich um einen String (Wort) #handelt
+# Gibt "hello world" in der Konsole aus. Die Anführungszeichen sind notwendig 
+# um zu Kennzeichnen, dass es sich um einen String (Wort) handelt
 print("hello world")
 
-#Deklariere eine Variable alter und setzte sie auf 21
+#Deklariere eine Variable mit dem Namen "alter" und setzte sie auf 21
 alter = 21
 
-#Gebe die Variable zusammen mit zwei anderen Strings aus. Die Variable ist ein Integer (Zahl), deswegen muss sie mit der str() Methode #in ein String konvertiert werden. Dies wird "Ich bin 21 Jahre alt" ausgeben.
+#Gebe die Variable zusammen mit zwei anderen Strings aus. Die Variable ist ein Integer (Zahl), deswegen muss sie
+# mit der str() Methode in ein String konvertiert werden. Dies wird "Ich bin 21 Jahre alt" ausgeben.
 print("Ich bin "+str(alter)+" Jahre alt")
 ````
 
 <a name="other_functions"></a>
 ## Brick Funktionen
-Der EV3 verfügt über ein Display und einen Lautsprecher. Das ist sehr nützlich um auszugeben an welcher Stelle im Programm er sich gerade befindet. Am einfachsten lässt sich das Display über `display.text()` und der Lautsprecher über `sound.beep()` ansprechen. Die Tasten des EV3 sind sehr nützlich um beispielsweise das Programm zu beenden oder Parameter des Programms während der Laufzeit zu verändern. Die aktivierten Tasten kann man durch `brick.buttons()` bekommen. Mögliche Buttons sind: `LEFT_DOWN, DOWN, RIGHT_DOWN, LEFT, CENTER, RIGHT, LEFT_UP, UP, BEACON, RIGHT_UP`
+Der EV3 verfügt über ein Display und einen Lautsprecher. Das ist ebenfalls sehr nützlich um auszugeben an welcher Stelle im Programm er sich gerade befindet. Am einfachsten lässt sich das Display über `display.text()` und der Lautsprecher über `sound.beep()` ansprechen. Die Tasten des EV3 sind sehr nützlich um beispielsweise das Programm zu beenden oder Parameter des Programms während der Laufzeit zu verändern. Die aktivierten Tasten kann man durch `brick.buttons()` bekommen. Mögliche Buttons sind: `LEFT_DOWN, DOWN, RIGHT_DOWN, LEFT, CENTER, RIGHT, LEFT_UP, UP, BEACON, RIGHT_UP`
 ````
 #Püfe ob der untere Button gedrückt wurde
 down_pressed = Button.DOWN in brick.buttons()

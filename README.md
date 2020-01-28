@@ -104,6 +104,38 @@ Welche Datei ausgeführt wird, kann in /.vscode/launch.json festgelegt werden. B
 }
 ````
 
+## Konsolenausgabe
+Solange der EV3 mit dem Computer verbunden ist, lassen sich Konsolenausgaben machen. Dies ist sehr wichtig, da es ohne Zwischenausgaben sehr schwer ist zu erkennen an welcher Stelle im Programm der EV3 gerade ist. Dies funktioniert über `print`.
+````
+# Gibt "hello world" in der Konsole aus. Die Anführungszeichen sind notwendig um zu Kennzeichnen, dass es sich um einen String (Wort) #handelt
+print("hello world")
+
+#Deklariere eine Variable alter und setzte sie auf 21
+alter = 21
+
+#Gebe die Variable zusammen mit zwei anderen Strings aus. Die Variable ist ein Integer (Zahl), deswegen muss sie mit der str() Methode #in ein String konvertiert werden. Dies wird "Ich bin 21 Jahre alt" ausgeben.
+print("Ich bin "+str(alter)+" Jahre alt")
+````
+
+<a name="other_functions"></a>
+## Brick Funktionen
+Der EV3 verfügt über ein Display und einen Lautsprecher. Das ist sehr nützlich um auszugeben an welcher Stelle im Programm er sich gerade befindet. Am einfachsten lässt sich das Display über `display.text()` und der Lautsprecher über `sound.beep()` ansprechen. Die Tasten des EV3 sind sehr nützlich um beispielsweise das Programm zu beenden oder Parameter des Programms während der Laufzeit zu verändern. Die aktivierten Tasten kann man durch `brick.buttons()` bekommen. Mögliche Buttons sind: `LEFT_DOWN, DOWN, RIGHT_DOWN, LEFT, CENTER, RIGHT, LEFT_UP, UP, BEACON, RIGHT_UP`
+````
+#Püfe ob der untere Button gedrückt wurde
+down_pressed = Button.DOWN in brick.buttons()
+
+#Spiele einen Ton
+brick.sound.beep()
+
+#Lösche alles was vorher auf dem Display angezeigt wurde
+brick.display.clear()
+
+#Zeige den Text "Hallo" auf dem Display and den Koordinaten (0,50)
+brick.display.text("Hallo", (0, 50))
+
+# Stelle das Statuslicht auf Rot
+brick.light(Color.RED)
+````
 ## Motoren
 Um einen Motor zu benutzen muss man zuerst ein Motor-Objekt erstellen und dabei den Port angeben. Für den Port C sieht das dann zum Beispiel so aus: `leftMotor = Motor(Port.C)`. Anschließend kann man mit der `run_target`-Methode den Motor um einen bestimmten Winkel drehen oder mit der `run`-Methode den Motor ohne Begrenzung laufen lassen. Um den Motor wieder anzuhalten, sollte man die `stop`-Methode benutzen.
 ```
@@ -202,25 +234,7 @@ imu = IMU(Port.S3, 'GYRO')
 result = imu.angle()
 ````
 
-<a name="other_functions"></a>
-## Sonstige Funktionen
-Der EV3 verfügt über ein Display und einen Lautsprecher. Das ist sehr nützlich um auszugeben an welcher Stelle im Programm er sich gerade befindet. Am einfachsten lässt sich das Display über `display.text()` und der Lautsprecher über `sound.beep()` ansprechen. Die Tasten des EV3 sind sehr nützlich um beispielsweise das Programm zu beenden oder Parameter des Programms während der Laufzeit zu verändern. Die aktivierten Tasten kann man durch `brick.buttons()` bekommen. Mögliche Buttons sind: `LEFT_DOWN, DOWN, RIGHT_DOWN, LEFT, CENTER, RIGHT, LEFT_UP, UP, BEACON, RIGHT_UP`
-````
-#Püfe ob der untere Button gedrückt wurde
-down_pressed = Button.DOWN in brick.buttons()
 
-#Spiele einen Ton
-brick.sound.beep()
-
-#Lösche alles was vorher auf dem Display angezeigt wurde
-brick.display.clear()
-
-#Zeige den Text "Hallo" auf dem Display and den Koordinaten (0,50)
-brick.display.text("Hallo", (0, 50))
-
-# Stelle das Statuslicht auf Rot
-brick.light(Color.RED)
-````
 <a name="boot_problems"></a>
 # EV3 Boot Probleme
-Manchmal bleibt der EV3 beim Starten hängen. Dies passiert vermutlich weil der Akku leer ist, also sollte der EV3 zunächst mit dem AUfladegerät verbunden werden. Dann muss die SD-Karte auf der linken Seite des Bricks entfernt werden. Hier ist das Betriebssystem was wir benutzen gespeichert und wenn wir diese entfernen wird wieder das Standardbetriebssystem benutzt. Um den EV3 jetzt neu zustarten muss die Mittlere- und die Zurück-Taste (oben links) gleichzeitig für mehrere Sekunden gedrückt werden. Nachdem der EV3 gestartet ist, kann er gleich wieder runtergefahren werden (Zurück-Taste). Dann kann die SD-Larte wieder eingesetzt werden und der EV3 sollte anschließend normal starten.
+Manchmal bleibt der EV3 beim Starten hängen. Dies passiert vermutlich weil der Akku leer ist, also sollte der EV3 zunächst mit dem Aufladegerät verbunden werden. Dann muss die SD-Karte auf der linken Seite des Bricks entfernt werden. Hier ist das Betriebssystem was wir benutzen gespeichert und wenn wir diese entfernen wird wieder das Standardbetriebssystem benutzt. Um den EV3 jetzt neu zustarten muss die Mittlere- und die Zurück-Taste (oben links) gleichzeitig für mehrere Sekunden gedrückt werden. Nachdem der EV3 gestartet ist, kann er gleich wieder runtergefahren werden (Zurück-Taste). Dann kann die SD-Karte wieder eingesetzt werden und der EV3 sollte anschließend normal starten.

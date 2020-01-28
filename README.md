@@ -17,6 +17,7 @@ Python für Lego Mindstorm EV3
   * [Gyrosensor](#Gyrosensor)
   * [Farbsensor](#Farbsensor)
   * [Inertial Measurement Unit](#imu)
+* [Sonsige Funktionen](#other_functions)
  
 
   
@@ -200,7 +201,24 @@ imu = IMU(Port.S3, 'GYRO')
 result = imu.angle()
 ````
 
+<a name="other_functions"></a>
+## Sonstige Funktionen
+Der EV3 verfügt über ein Display und einen Lautsprecher. Das ist sehr nützlich um auszugeben an welcher Stelle im Programm er sich gerade befindet. Am einfachsten lässt sich das Display über `display.text()` und der Lautsprecher über `sound.beep()` ansprechen. Die Tasten des EV3 sind sehr nützlich um beispielsweise das Programm zu beenden oder Parameter des Programms während der Laufzeit zu verändern. Die aktivierten Tasten kann man durch `brick.buttons()` bekommen. Mögliche Buttons sind: `LEFT_DOWN, DOWN, RIGHT_DOWN, LEFT, CENTER, RIGHT, LEFT_UP, UP, BEACON, RIGHT_UP`
+````
+#Püfe ob der untere Button gedrückt wurde
+down_pressed = Button.DOWN in brick.buttons()
 
+#Spiele einen Ton
+brick.sound.beep()
 
+#Lösche alles was vorher auf dem Display angezeigt wurde
+brick.display.clear()
+
+#Zeige den Text "Hallo" auf dem Display and den Koordinaten (0,50)
+brick.display.text("Hallo", (0, 50))
+
+# Stelle das Statuslicht auf Rot
+brick.light(Color.RED)
+````
 
 

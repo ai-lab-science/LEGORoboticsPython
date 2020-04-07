@@ -37,7 +37,7 @@ def distance():
 while True:
     #debug_print(distance())
     output(distance())
-    time.sleep(0.05)
+    time.sleep(0.2)
         
         
     

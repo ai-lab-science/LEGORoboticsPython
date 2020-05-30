@@ -19,6 +19,7 @@ Python für Lego Mindstorm EV3
   * [Gyrosensor](#Gyrosensor)
   * [Farbsensor](#Farbsensor)
   * [Inertial Measurement Unit](#imu)
+  * [Time-of-Flight Sensor](#tof)
 * [EV3 Boot Probleme](#boot_problems)
  
 
@@ -236,6 +237,25 @@ imu = IMU(Port.S3, 'GYRO')
 #Speichere die aktuellen Messdaten in result
 result = imu.angle()
 ````
+
+
+<a name="tof"></a>
+### Time-of-Flight Sensor
+Der Time-of-Flight(ToF) Sensor ist eine Alternative zum Ultraschallsensor. Er misst also ebenfalls Entfernungen, ist dabei aber in der Regel genauer und hat er eine höhere Reichweite. Da es sich hier auch nicht um einen offiziellen Sensor von Lego handelt, muss auch hier das entsprechende Script aus dem Tools Ordner importiert werden. Ansonsten benutzt man den ToF-Sensor fast genauso wie den Ultraschall-Sensor, nur dass man ihn am Ende vom Programm am besten mit der `close()` Funktion schließen sollte.
+
+````
+#Fuege den Tools Ordner zum PYTHONPATH hinzu. Nicht notwendig wenn TOF.py im selben Ordner ist
+import sys
+sys.path.append("/home/robot/LEGORoboticsPython/Tools")
+from TOF import TOF
+
+#Port des Seonsors festlegen
+tof = TOF(Port.S2)
+print(tof.distance())
+
+tof.close()
+````
+
 
 
 <a name="boot_problems"></a>

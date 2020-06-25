@@ -5,11 +5,12 @@ Python für Lego Mindstorm EV3
 * [Installation und Dokumentation](#installation)
 * [Voraussetzung](#Voraussetzung)
 * [Visual Studio Code Interface](#vscode)
-* [Verbindung herstellen](#connection)
-  * [USB](#USB)
-  * [WLAN](#WLAN)
-* [Neues Projekt erstellen](#new_project)
-* [Programm ausführen](#execute_program)
+* [Getting started](#start)
+  * [Verbindung herstellen](#connection)
+    * [USB](#USB)
+    * [WLAN](#WLAN)
+  * [Neues Projekt erstellen](#new_project)
+  * [Programm ausführen](#execute_program)
 * [Konsolenausgabe](#Konsolenausgabe)
 * [Brick Funktionen](#other_functions)
 * [Motoren](#Motoren)
@@ -42,18 +43,21 @@ Python für Lego Mindstorm EV3
 ## Visual Studio Code Interface
 <img src="Anleitungen/assets/Interface.png" width="300">
 
+<a name="start"></a>
+## Getting started
+
 <a name="connection"></a>
-## Verbindung herstellen
+### Verbindung herstellen
 Durch die EV3 MicroPython Erweiterung kann man mit dem EV3DEV Device Browser in Visual Studio Code eine Verbindung mit dem EV3 herstellen.
 
 <img src="Anleitungen/assets/ConnectGuide1.png" width="300">
 
-### USB
+#### USB
 Wenn der EV3 über USB verbunden ist, sollte er automatisch erkannt werden.
 
 <img src="Anleitungen/assets/ConnectGuide2.png" width="400">
 
-### WLAN
+#### WLAN
 Um den EV3 über WLAN zu verbinden muss der PC und der EV3 im gleichen Netzwerk sein. Auf dem EV3 kann man sich einfach über das Interface verbinden:
 
 <img src="Anleitungen/assets/WLANGuide1.png" width="150"><img src="Anleitungen/assets/WLANGuide2.png" width="150"><img src="Anleitungen/assets/WLANGuide3.png" width="150"><img src="Anleitungen/assets/WLANGuide4.png" width="150"><img src="Anleitungen/assets/WLANGuide7.png" width="150">
@@ -67,7 +71,7 @@ Die IP-Adresse wird in der oberen, linken Ecke des Menüs angezeigt.
 <img src="Anleitungen/assets/WLANGuide8.png" width="150">
 
 <a name="new_project"></a>
-## Neues Projekt erstellen
+### Neues Projekt erstellen
 Ein neues Projekt kann man erstellen, indem man auf die EV3 Erweiterung klickt und `Create a new project` auswählt.
 
 <img src="Anleitungen/assets/NewProject.png" width="200">
@@ -88,7 +92,7 @@ In der ersten Zeile von jedem Python-Skript muss angegeben werden, welche Versio
 ```#!/usr/bin/env pybricks-micropython```
 
 <a name="execute_program"></a>
-## Programm ausführen
+### Programm ausführen
 Wenn der EV3 über USB oder WLAN verbunden ist, kann das Programm oben unter Debug -> Start Debugging ausgeführt werden (Alternativ F5).
 Welche Datei ausgeführt wird, kann in /.vscode/launch.json festgelegt werden. Bei einem neuen Projekt wird dort standardmäßig main.py ausgeführt. 
 ````

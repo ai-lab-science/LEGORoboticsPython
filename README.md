@@ -24,7 +24,7 @@ Python für Lego Mindstorm EV3
 * [EV3 Boot Probleme](#boot_problems)
  
 ## Challenges
-[Aufgaben für den Workshop](https://docs.google.com/document/d/e/2PACX-1vQC1gMbukuX2bsJiOsX_Wh-9rPrtWls7LPt80tlCCTmwR-nkHkHhuxaGwO4MT9ZV-r4VcTjgkhT8tVO/pub)
+[Aufgaben für den Workshop](https://docs.google.com/document/d/e/2PACX-1vQC1gMbukuX2bsJiOsX_Wh-9rPrtWls7LPt80tlCCTmwR-nkHkHhuxaGwO4MT9ZV-r4VcTjgkhT8tVO/pub)  
 [Aufgabenstellung als Präsentation](https://docs.google.com/presentation/d/e/2PACX-1vRl0ZqZrWVgRnYdKtlPD5zI77LM-PyyWXngRCMjM9x0yaYdHdnF7eEPl4RaJwFNZYZeYfJfLsTjnLB_/pub?start=false&loop=false&delayms=3000)
 
 <!--## Arbeitsplan Praktikum

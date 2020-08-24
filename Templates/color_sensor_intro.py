@@ -40,11 +40,19 @@ while program_running:
     # Um dafür einen guten Schwellwert zu finden, solltet ihr den Reflektionsmesswert ebenfalls ausgeben.
     # TODO: Aufgabe bearbeiten
 
+    # Aufgabe 5: Gyro-Sensor
+    # Jetzt sollt ihr euch mit dem Gyro-Sensor vertraut machen. Gebt als Konsolenausgabe den 
+    # gemessenen Winkel und die WInkelgeschwindigkeit aus. Formatiert die Ausgabe so, dass man die
+    # verschiedenen Messwerte identifizieren kann (z.B. "Winkel: 90, Winkelgeschwindigkeit: 0").
+    # TODO: Aufgabe bearbeiten
 
-    # Aufgabe 5: Das Verhalten aus Aufgabe 4 soll jetzt so geändert werden, dass der Roboter sich 
+
+    # Aufgabe 6: Das Verhalten aus Aufgabe 4 soll jetzt so geändert werden, dass der Roboter sich 
     # um 180 Grad dreht wenn er eine Tischkante erkennt. Dafür sollt ihr jetzt aber den Gyro-Sensor 
     # benutzten statt einer Wartezeit. Tipp: Führt reset_angle(0) aus wenn ihr die Tischkannte erkennt.
     # TODO: Aufgabe bearbeiten
+
+    
 
 
 

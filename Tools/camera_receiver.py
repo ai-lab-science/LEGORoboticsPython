@@ -10,7 +10,7 @@ import os
 
 process = os.popen('python3 /home/robot/LEGORoboticsPython/Tools/camera.py') 
 
-f = open('tmp_camera_data.txt', 'r', os.O_NONBLOCK)
+f = open('tmp_camera_tracking_data.txt', 'r', os.O_NONBLOCK)
 while not Button.UP in brick.buttons():
     f.seek(0)
     text= f.read()

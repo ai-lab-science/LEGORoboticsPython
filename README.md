@@ -22,7 +22,7 @@ Python für Lego Mindstorm EV3
   * [Inertial Measurement Unit](#imu)
   * [Time-of-Flight Sensor](#tof)
 * [EV3 Boot Probleme](#boot_problems)
-* [Wochenplan/Templates](#template)
+* [Wochenplan/Templates](#templates)
  
 ## Challenges
 [Aufgaben für den Workshop](https://docs.google.com/document/d/e/2PACX-1vQC1gMbukuX2bsJiOsX_Wh-9rPrtWls7LPt80tlCCTmwR-nkHkHhuxaGwO4MT9ZV-r4VcTjgkhT8tVO/pub)  

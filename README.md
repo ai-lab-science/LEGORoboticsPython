@@ -22,6 +22,7 @@ Python für Lego Mindstorm EV3
   * [Inertial Measurement Unit](#imu)
   * [Time-of-Flight Sensor](#tof)
 * [EV3 Boot Probleme](#boot_problems)
+* [Wochenplan/Templates](#template)
  
 ## Challenges
 [Aufgaben für den Workshop](https://docs.google.com/document/d/e/2PACX-1vQC1gMbukuX2bsJiOsX_Wh-9rPrtWls7LPt80tlCCTmwR-nkHkHhuxaGwO4MT9ZV-r4VcTjgkhT8tVO/pub)  
@@ -265,3 +266,11 @@ tof.close()
 <a name="boot_problems"></a>
 # EV3 Boot Probleme
 Manchmal bleibt der EV3 beim Starten hängen. Dies passiert vermutlich weil der Akku leer ist, also sollte der EV3 zunächst mit dem Aufladegerät verbunden werden. Dann muss die SD-Karte auf der linken Seite des Bricks entfernt werden. Hier ist das Betriebssystem was wir benutzen gespeichert und wenn wir diese entfernen wird wieder das Standardbetriebssystem benutzt. Um den EV3 jetzt neuzustarten muss die Mittlere- und die Zurück-Taste (oben links) gleichzeitig für mehrere Sekunden gedrückt werden. Nachdem der EV3 gestartet ist, kann er gleich wieder runtergefahren werden (Zurück-Taste). Dann kann die SD-Karte wieder eingesetzt werden und der EV3 sollte anschließend normal starten.
+
+<a name="templates"></a>
+# Wochenplan/Templates
+Montag | Dienstag | Mittwoch | Donnerstag | Freitag 
+--- | --- | --- | --- | ---
+[Python-Intro-Template](Templates/python_intro.py) | [Farbsensor-Template](Templates/color_sensor_intro.py) | [Regelungs-Template](Templates/pid_controller_intro.py)
+| | [Zustandsautomat-Template](Templates/state_machine.py) | [Leistungsmessung-Template](Templates/Energy_Consumption_Template.py) | |
+

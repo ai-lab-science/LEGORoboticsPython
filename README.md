@@ -271,6 +271,6 @@ Manchmal bleibt der EV3 beim Starten hängen. Dies passiert vermutlich weil der 
 # Wochenplan/Templates
 Montag | Dienstag | Mittwoch | Donnerstag | Freitag 
 --- | --- | --- | --- | ---
-[Python-Intro-Template](Templates/python_intro.py) | [Farbsensor-Template](Templates/color_sensor_intro.py) | [Regelungs-Template](Templates/pid_controller_intro.py)
-| | [Zustandsautomat-Template](Templates/state_machine.py) | [Leistungsmessung-Template](Templates/Energy_Consumption_Template.py) | |
+[Python-Intro-Template](Templates/python_intro.py) | [Farbsensor-Template](Templates/color_sensor_intro.py)<br>[Zustandsautomat-Template](Templates/state_machine.py) | [Regelungs-Template](Templates/pid_controller_intro.py)<br>[Leistungsmessung-Template](Templates/Energy_Consumption_Template.py) 
+
 

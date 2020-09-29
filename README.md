@@ -4,6 +4,7 @@ Python für Lego Mindstorm EV3
 ## Inhalt
 * [Installation und Dokumentation](#installation)
 * [Voraussetzung](#Voraussetzung)
+* [Hinweise Workshop 2020](#workshop)
 * [Visual Studio Code Interface](#vscode)
 * [Getting started](#start)
   * [Verbindung herstellen](#connection)
@@ -41,6 +42,11 @@ Python für Lego Mindstorm EV3
 * Visual Studio Code mit der Erweiterung [LEGO® MINDSTORMS® EV3 MicroPython](https://marketplace.visualstudio.com/items?itemName=lego-education.ev3-micropython)
 * Einen EV3 mit einer microSD-Karte worauf das [Micropython Image](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installiert ist
 
+<a name="workshop"></a>
+## Hinweise Workshop 2020
+**Visual Studio Code muss auf den Schulrechnern über die Verknüpfung auf dem Desktop gestartet werden. Anonsten wird die notwendige Erweiterung nicht geladen.**
+
+
 <a name="vscode"></a>
 ## Visual Studio Code Interface
 <img src="Anleitungen/assets/Interface.png" width="300">
@@ -55,7 +61,7 @@ Durch die EV3 MicroPython Erweiterung kann man mit dem EV3DEV Device Browser in 
 <img src="Anleitungen/assets/ConnectGuide1.png" width="300">
 
 #### USB
-Wenn der EV3 über USB verbunden ist, sollte er automatisch erkannt werden.
+Wenn der EV3 über USB verbunden ist, sollte er automatisch erkannt werden. Falls er nicht erkannt wird, kann man über `I don't see my device` die IP-Adresse angeben, die im EV3 in dem Tethering Menü angezeigt wird(Normalerweise 192.168.0.1). Wenn weiterhin Verbindungsprobleme auftreten, sollte in den Netzwerkeinstellungen des EV3s die Option `Tethering gadget`aktiviert werden.
 
 <img src="Anleitungen/assets/ConnectGuide2.png" width="400">
 

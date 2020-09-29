@@ -4,7 +4,7 @@ Python für Lego Mindstorm EV3
 ## Inhalt
 * [Installation und Dokumentation](#installation)
 * [Voraussetzung](#Voraussetzung)
-* [Hinweise Workshop 2020](#workshop)
+* [Hinweis zum Workshop 2020](#workshop)
 * [Visual Studio Code Interface](#vscode)
 * [Getting started](#start)
   * [Verbindung herstellen](#connection)
@@ -43,7 +43,7 @@ Python für Lego Mindstorm EV3
 * Einen EV3 mit einer microSD-Karte worauf das [Micropython Image](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installiert ist
 
 <a name="workshop"></a>
-## Hinweise Workshop 2020
+## Hinweis zum Workshop 2020
 **Visual Studio Code muss auf den Schulrechnern über die Verknüpfung auf dem Desktop gestartet werden. Anonsten wird die notwendige Erweiterung nicht geladen.**
 
 

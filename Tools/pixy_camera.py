@@ -5,6 +5,8 @@ from pybricks.hubs import EV3Brick
 from pybricks.iodevices import I2CDevice
 from pybricks.parameters import Port
 import time
+import math
+
 
 
 
@@ -15,8 +17,6 @@ class Camera:
         self.cam = I2CDevice(port, 0x54)
         wait(200)
 
-        
-    
 
 
     def printTime(self):
@@ -24,15 +24,15 @@ class Camera:
         current_time = time.strftime("MICRO: %H:%M:%S", t)
         print(current_time)
         
-    def getObjectData(self,signature, draw=True):
-        self.cam.write(0,bytes((174,193, 32, 2,signature ,1)))
+    # def getObjectData(self,signature, draw=True):
+    #     self.cam.write(0,bytes((174,193, 32, 2,signature ,1)))
 
-        block = self.cam.read(0,20)
-        sig = block[7]*256 + block[6]
-        x = block[9]*256 + block[8]
-        y = block[11]*256 + block[10]
-        w = block[13]*256 + block[12]
-        h = block[15]*256 + block[14]
+    #     block = self.cam.read(0,20)
+    #     sig = block[7]*256 + block[6]
+    #     x = block[9]*256 + block[8]
+    #     y = block[11]*256 + block[10]
+    #     w = block[13]*256 + block[12]
+    #     h = block[15]*256 + block[14]
         
     def getObjectData(self,signature, draw=True):
         self.cam.write(0,bytes((174,193, 32, 2,signature ,1)))
@@ -145,35 +145,54 @@ class Camera:
             payload_read += feature_length + 2
         return mainfeatures
 
+    def get_line_tracking_angle(self):
+        data = self.get_line_tracking_data()
+        angle = 0
+        if len(data.vectors)>0:
+            v = data.vectors[0]
+            angle = math.degrees(math.atan2((abs(v.y1)-abs(v.y0)),(abs(v.x1)-abs(v.x0))))+90
+        return angle,data
+
 
     def set_vector(self, index):
         """Set vector for Pixy2 to follow."""
-        request_block = [174, 193, 56, 1, index]
-        self.smbus.write_i2c_block_data(self.i2c_address, 0, request_block)
-        response = self.smbus.read_i2c_block_data(self.i2c_address, 0, 10)
+        self.cam.write(0,bytes((174, 193, 56, 1, index)))
+        response = self.cam.read(0,10)
+
+        #request_block = [174, 193, 56, 1, index]
+        #self.smbus.write_i2c_block_data(self.i2c_address, 0, request_block)
+        #response = self.smbus.read_i2c_block_data(self.i2c_address, 0, 10)
+        
         return response
 
-    # def set_next_turn(self, angle):
-    #     """Set direction robot has to take at intersection."""
-    #     if angle >= 0:
-    #         request_block = [174, 193, 58, 2, angle, 0]
-    #     else:
-    #         request_block = [174, 193, 58, 2, angle, -1]
-    #     self.smbus.write_i2c_block_data(self.i2c_address, 0, request_block)
-    #     response = self.smbus.read_i2c_block_data(self.i2c_address, 0, 10)
-    #     self._next_turn = angle
-    #     return response
+    def set_next_turn(self, angle):
+        """Set direction robot has to take at intersection."""
+        if angle >= 0:
+            request_block = (174, 193, 58, 2, angle, 0)
+        else:
+            request_block = (174, 193, 58, 2, angle, -1)
+        self.cam.write(0,bytes(request_block))
+        response = self.cam.read(0,10)
 
-    # def set_default_turn(self, angle):
-    #     """"Set direction robot has to take at intersection."""
-    #     if angle >= 0:
-    #         request_block = [174, 193, 60, 2, angle, 0]
-    #     else:
-    #         request_block = [174, 193, 60, 2, angle, -1]
-    #     self.smbus.write_i2c_block_data(self.i2c_address, 0, request_block)
-    #     response = self.smbus.read_i2c_block_data(self.i2c_address, 0, 10)
-    #     self._next_turn = angle
-    #     return response
+        #self.smbus.write_i2c_block_data(self.i2c_address, 0, request_block)
+        #response = self.smbus.read_i2c_block_data(self.i2c_address, 0, 10)
+        self._next_turn = angle
+        return response
+
+    def set_default_turn(self, angle):
+        """"Set direction robot has to take at intersection."""
+        if angle >= 0:
+            request_block = (174, 193, 60, 2, angle, 0)
+        else:
+            request_block = (174, 193, 60, 2, angle, -1)
+        
+        self.cam.write(0,bytes(request_block))
+        response = self.cam.read(0,10)
+
+        #self.smbus.write_i2c_block_data(self.i2c_address, 0, request_block)
+        #response = self.smbus.read_i2c_block_data(self.i2c_address, 0, 10)
+        self._next_turn = angle
+        return response
 
 
 class Vector:

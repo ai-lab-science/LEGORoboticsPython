@@ -14,11 +14,10 @@ sys.path.append("/home/robot/LEGORoboticsPython/Tools")
 from pixy_camera import *
 
 ev3=EV3Brick()
-#Port des Seonsors festlegen
+#Port des Sensors festlegen
 camera = Camera(Port.S1)
 #c = ColorSensor(Port.S3)
 camera.lamp_on()
-data = MainFeatures()
 
 while not Button.DOWN in ev3.buttons.pressed():
     #x2,y2,w2,h2=camera.getObjectData(2,False)
@@ -27,15 +26,13 @@ while not Button.DOWN in ev3.buttons.pressed():
 
     #result =  'Camera x1: ' + str(x1)
     #print(result)
-    data = camera.get_line_tracking_data()
+    angle,data = camera.get_line_tracking_angle()
+    print(angle)
     #print(data.number_of_barcodes)
     for b in data.barcodes:
         print("Code: "+str(b.code)+' Flag: '+str(b.flags))
 
-    for v in data.vectors:
-        angle = math.degrees(math.atan2((abs(v.y1)-abs(v.y0)),(abs(v.x1)-abs(v.x0))))+90
-        print('Vector:'+str(angle))
-    #print("Color"+str(c.color()))
+    
     data.clear()
     wait(20)
 camera.lamp_off()

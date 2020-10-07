@@ -1,6 +1,9 @@
 # LEGORoboticsPython
-Python für Lego Mindstorm EV3
+Tools und Demos für die Python-Entwicklung mit dem Lego Mindstorm EV3 und EV3Dev
 
+## [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki)
+
+<!--
 ## Inhalt
 * [Installation und Dokumentation](#installation)
 * [Voraussetzung](#Voraussetzung)
@@ -28,10 +31,10 @@ Python für Lego Mindstorm EV3
 ## Challenges
 [Aufgaben für den Workshop](https://docs.google.com/document/d/e/2PACX-1vQC1gMbukuX2bsJiOsX_Wh-9rPrtWls7LPt80tlCCTmwR-nkHkHhuxaGwO4MT9ZV-r4VcTjgkhT8tVO/pub)  
 [Aufgabenstellung als Präsentation](https://docs.google.com/presentation/d/e/2PACX-1vRl0ZqZrWVgRnYdKtlPD5zI77LM-PyyWXngRCMjM9x0yaYdHdnF7eEPl4RaJwFNZYZeYfJfLsTjnLB_/pub?start=false&loop=false&delayms=3000)
-
+-->
 <!--## Arbeitsplan Praktikum
 [Arbeitsplan](https://docs.google.com/document/d/e/2PACX-1vRTPF6EI3NPntP9-wfKK2BqjbzqhgZljUnQAXWiBYso_J3kHYTvZ1trvV-K3ogpHGYAEFRPK_mBcCN5/pub)-->
-
+<!--
 <a name="installation"></a>
 ## Installation und Dokumentation
 [Offizielle Anleitung](https://le-www-live-s.legocdn.com/sc/media/files/ev3-micropython/getting%20started%20with%20micropython_de-3619c654757bdefde79e650951c58d8a.pdf) (für zusätzliche Informationen)
@@ -279,4 +282,4 @@ Montag | Dienstag | Mittwoch | Donnerstag | Freitag
 --- | --- | --- | --- | ---
 [Python-Intro-Template](Templates/python_intro.py) | [Farbsensor-Template](Templates/color_sensor_intro.py)<br>[Zustandsautomat-Template](Templates/state_machine.py) | [Regelungs-Template](Templates/pid_controller_intro.py)<br>[Leistungsmessung-Template](Templates/Energy_Consumption_Template.py) 
 
-
+-->

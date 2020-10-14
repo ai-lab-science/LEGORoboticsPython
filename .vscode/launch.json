@@ -8,7 +8,7 @@
 			"name": "Download and Run",
 			"type": "ev3devBrowser",
 			"request": "launch",
-			"program": "/home/robot/${workspaceRootFolderName}/Demos/IMU_Demo.py"
+			"program": "/home/robot/${workspaceRootFolderName}/Demos/camera_demo.py"
 		}
 	]
 }

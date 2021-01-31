@@ -18,8 +18,9 @@ distance = ultrasonicSensor.distance()
 
 left_motor.run(800)
 right_motor.run(800)
-while  distance > 190:
+while  distance > 195:
     distance = ultrasonicSensor.distance()
+    print(distance)
 left_motor.stop()
 right_motor.stop()
 

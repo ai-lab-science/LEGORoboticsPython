@@ -1,9 +1,49 @@
 # LEGORoboticsPython
 Tools und Demos für die Python-Entwicklung mit dem Lego Mindstorm EV3 und EV3Dev
 
-## [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki)
+## [Getting Started](Getting-Started)
+
+ 
+ [Dokumentation](Dokumentation)
+
+
+## Brick Funktionen 
+* [Konsolenausgabe](Konsolenausgabe)
+* [Display](Display)
+* [Buttons](Buttons)
+* [Lautsprecher](Lautsprecher)
+  
+## Motoren
+* [Motoren](Motoren)
+
+## Sensoren
+*   [Berührungssensor](Berührungssensor)
+
+*   [Ultraschallsensor](Ultraschallsensor)
+
+*   [Gyrosensor](Gyrosensor)
+
+*   [Farbsensor](Farbsensor)
+
+*   [Inertial Measurement Unit](Inertial-Measurement-Unit)
+
+*   [Time-of-Flight Sensor](Time-of-Flight-Sensor)
+*   [Pixy 2 Kamera](Kamera)
+
+
+## Workshop 2020
+
+* [Wochenplan](Wochenplan)
+
+* [Challenges](Challenges)
+
+* [Bauanleitung](Bauanleitung)
+
+ [Bekannte Probleme](Bekannte-Probleme)
+
 
 <!--
+## [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki)
 ## Inhalt
 * [Installation und Dokumentation](#installation)
 * [Voraussetzung](#Voraussetzung)

@@ -1,42 +1,29 @@
-# LEGORoboticsPython
-Tools und Demos für die Python-Entwicklung mit dem Lego Mindstorm EV3 und EV3Dev
+# LEGORoboticsPython 
+Wir bieten Tools und Demos für die Python-Entwicklung mit dem Lego Mindstorm EV3 und EV3Dev an!
+Diese Zusammenfassung ist im Rahmen eines Workshops entstanden. Informationen zum Ablauf, Aufgaben und Videos findet ihr im [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki).
 
-## [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki)
+Hier folgt eine kurze Anleitung zum Verbindung des EV3 mit Visual Studio Code und zur Erstellen vom ersten Programm.
+Eine detaillierte Auflistung aller Hardware-Komponenten, sowie Code-Sniplets sind ebenfalls im [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki) dokumentiert.
 
-
-<!--
-
-## Inhalt
+### Inhalt
 * [Installation und Dokumentation](#installation)
-* [Voraussetzung](#Voraussetzung)
+* [Voraussetzung](#voraussetzung)
 * [Hinweis zum Workshop 2020](#workshop)
 * [Visual Studio Code Interface](#vscode)
-* [Getting started](#start)
   * [Verbindung herstellen](#connection)
     * [USB](#USB)
     * [WLAN](#WLAN)
   * [Neues Projekt erstellen](#new_project)
   * [Programm ausführen](#execute_program)
-* [Konsolenausgabe](#Konsolenausgabe)
-* [Brick Funktionen](#other_functions)
-* [Motoren](#Motoren)
-* [Sensoren](#Sensoren)
-  * [Berührungssensor](#Berührungssensor)
-  * [Ultraschallsensor](#Ultraschallsensor)
-  * [Gyrosensor](#Gyrosensor)
-  * [Farbsensor](#Farbsensor)
-  * [Inertial Measurement Unit](#imu)
-  * [Time-of-Flight Sensor](#tof)
-* [EV3 Boot Probleme](#boot_problems)
-* [Wochenplan/Templates](#templates)
- 
+
+<!-- 
 ## Challenges
 [Aufgaben für den Workshop](https://docs.google.com/document/d/e/2PACX-1vQC1gMbukuX2bsJiOsX_Wh-9rPrtWls7LPt80tlCCTmwR-nkHkHhuxaGwO4MT9ZV-r4VcTjgkhT8tVO/pub)  
 [Aufgabenstellung als Präsentation](https://docs.google.com/presentation/d/e/2PACX-1vRl0ZqZrWVgRnYdKtlPD5zI77LM-PyyWXngRCMjM9x0yaYdHdnF7eEPl4RaJwFNZYZeYfJfLsTjnLB_/pub?start=false&loop=false&delayms=3000)
 -->
 <!--## Arbeitsplan Praktikum
 [Arbeitsplan](https://docs.google.com/document/d/e/2PACX-1vRTPF6EI3NPntP9-wfKK2BqjbzqhgZljUnQAXWiBYso_J3kHYTvZ1trvV-K3ogpHGYAEFRPK_mBcCN5/pub)-->
-<!--
+
 <a name="installation"></a>
 ## Installation und Dokumentation
 [Offizielle Anleitung](https://le-www-live-s.legocdn.com/sc/media/files/ev3-micropython/getting%20started%20with%20micropython_de-3619c654757bdefde79e650951c58d8a.pdf) (für zusätzliche Informationen)
@@ -55,9 +42,6 @@ Tools und Demos für die Python-Entwicklung mit dem Lego Mindstorm EV3 und EV3De
 <a name="vscode"></a>
 ## Visual Studio Code Interface
 <img src="Anleitungen/assets/Interface.png" width="300">
-
-<a name="start"></a>
-## Getting started
 
 <a name="connection"></a>
 ### Verbindung herstellen
@@ -121,7 +105,7 @@ Welche Datei ausgeführt wird, kann in /.vscode/launch.json festgelegt werden. B
 	]
 }
 ````
-
+<!--
 ## Konsolenausgabe
 Solange der EV3 mit dem Computer verbunden ist, lassen sich Konsolenausgaben machen. Dies ist sehr wichtig, da es ohne Zwischenausgaben sehr schwer ist zu erkennen an welcher Stelle im Programm der EV3 gerade ist. Dies funktioniert über `print`.
 ````

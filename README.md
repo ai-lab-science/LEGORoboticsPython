@@ -2,7 +2,7 @@
 Wir bieten Tools und Demos für die Python-Entwicklung mit dem Lego Mindstorm EV3 und EV3Dev an!
 Diese Zusammenfassung ist im Rahmen eines Workshops entstanden. Informationen zum Ablauf, Aufgaben und Videos findet ihr im [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki).
 
-Hier folgt eine kurze Anleitung zum Verbindung des EV3 mit Visual Studio Code und zur Erstellen vom ersten Programm.
+Hier folgt eine kurze Anleitung zur Verbindung des EV3 mit Visual Studio Code.
 Eine detaillierte Auflistung aller Hardware-Komponenten, sowie Code-Sniplets sind ebenfalls im [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki) dokumentiert.
 
 ### Inhalt

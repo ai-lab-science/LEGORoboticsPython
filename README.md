@@ -1,4 +1,6 @@
 # LEGORoboticsPython 
+<img align="right" src="Anleitungen/assets/LEGORoboticsEV3-768x582.png " width="400">
+
 Wir bieten Tools und Demos für die Python-Entwicklung mit dem Lego Mindstorm EV3 und EV3Dev an!
 Diese Zusammenfassung ist im Rahmen eines Workshops entstanden. Informationen zum Ablauf, Aufgaben und Videos findet ihr im [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki).
 

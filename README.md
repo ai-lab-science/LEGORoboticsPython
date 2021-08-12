@@ -2,22 +2,12 @@
 <img align="right" src="Anleitungen/assets/LEGORoboticsEV3-768x582.png " width="400">
 
 Wir bieten Tools und Demos für die Python-Entwicklung mit dem Lego Mindstorm EV3 und EV3Dev an!
-Diese Zusammenfassung ist im Rahmen eines Workshops entstanden. Informationen zum Ablauf, Aufgaben und Videos findet ihr im [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki).
+Diese Zusammenfassung ist im Rahmen eines Workshops entstanden. Informationen zum Ablauf, Aufgaben und Videos findet ihr im [hier](https://github.com/rueckert/LEGORoboticsPython/wiki).
 
-Hier folgt eine kurze Anleitung zur Verbindung des EV3 mit Visual Studio Code.
-Eine detaillierte Auflistung aller Hardware-Komponenten, sowie Code-Sniplets sind ebenfalls im [Wiki](https://github.com/rueckert/LEGORoboticsPython/wiki) dokumentiert.
+Es folgt eine kurze Anleitung zur Verbindung des EV3 mit Visual Studio Code.
+Eine detaillierte Auflistung aller Hardware-Komponenten, sowie Code-Sniplets sind [hier](https://github.com/rueckert/LEGORoboticsPython/wiki) dokumentiert.
 
-### Inhalt
-* [Installation und Dokumentation](#installation)
-* [Voraussetzung](#voraussetzung)
-* [Hinweis zum Workshop 2020](#workshop)
-* [Visual Studio Code Interface](#vscode)
-  * [Verbindung herstellen](#connection)
-    * [USB](#USB)
-    * [WLAN](#WLAN)
-  * [Neues Projekt erstellen](#new_project)
-  * [Programm ausführen](#execute_program)
-
+## Getting Started
 <!-- 
 ## Challenges
 [Aufgaben für den Workshop](https://docs.google.com/document/d/e/2PACX-1vQC1gMbukuX2bsJiOsX_Wh-9rPrtWls7LPt80tlCCTmwR-nkHkHhuxaGwO4MT9ZV-r4VcTjgkhT8tVO/pub)  
@@ -26,37 +16,33 @@ Eine detaillierte Auflistung aller Hardware-Komponenten, sowie Code-Sniplets sin
 <!--## Arbeitsplan Praktikum
 [Arbeitsplan](https://docs.google.com/document/d/e/2PACX-1vRTPF6EI3NPntP9-wfKK2BqjbzqhgZljUnQAXWiBYso_J3kHYTvZ1trvV-K3ogpHGYAEFRPK_mBcCN5/pub)-->
 
-<a name="installation"></a>
 ## Installation und Dokumentation
 [Offizielle Anleitung](https://le-www-live-s.legocdn.com/sc/media/files/ev3-micropython/getting%20started%20with%20micropython_de-3619c654757bdefde79e650951c58d8a.pdf) (für zusätzliche Informationen)
 
 [Einführungspräsentation](https://docs.google.com/presentation/d/1aI6rTUCZh44TUXAJdzgp6wt7Sxh3pLjRxMZmbWnKNWI/edit?usp=sharing)
 
-## Voraussetzung
+### Voraussetzung
 * Visual Studio Code mit der Erweiterung [LEGO® MINDSTORMS® EV3 MicroPython](https://marketplace.visualstudio.com/items?itemName=lego-education.ev3-micropython)
 * Einen EV3 mit einer microSD-Karte worauf das [Micropython Image](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installiert ist
 
-<a name="workshop"></a>
-## Hinweis zum Workshop 2020
+### Hinweis zum Workshop 2020
 **Visual Studio Code muss auf den Schulrechnern über die Verknüpfung auf dem Desktop gestartet werden. Anonsten wird die notwendige Erweiterung nicht geladen.**
 
 
-<a name="vscode"></a>
-## Visual Studio Code Interface
+### Visual Studio Code Interface
 <img src="Anleitungen/assets/Interface.png" width="300">
 
-<a name="connection"></a>
 ### Verbindung herstellen
 Durch die EV3 MicroPython Erweiterung kann man mit dem EV3DEV Device Browser in Visual Studio Code eine Verbindung mit dem EV3 herstellen.
 
 <img src="Anleitungen/assets/ConnectGuide1.png" width="300">
 
-#### USB
+### USB
 Wenn der EV3 über USB verbunden ist, sollte er automatisch erkannt werden. Falls er nicht erkannt wird, kann man über `I don't see my device` die IP-Adresse angeben, die im EV3 in dem Tethering Menü angezeigt wird(Normalerweise 192.168.0.1). Wenn weiterhin Verbindungsprobleme auftreten, sollte in den Netzwerkeinstellungen des EV3s die Option `Tethering gadget`aktiviert werden.
 
 <img src="Anleitungen/assets/ConnectGuide2.png" width="400">
 
-#### WLAN
+### WLAN
 Um den EV3 über WLAN zu verbinden muss der PC und der EV3 im gleichen Netzwerk sein. Auf dem EV3 kann man sich einfach über das Interface verbinden:
 
 <img src="Anleitungen/assets/WLANGuide1.png" width="150"><img src="Anleitungen/assets/WLANGuide2.png" width="150"><img src="Anleitungen/assets/WLANGuide3.png" width="150"><img src="Anleitungen/assets/WLANGuide4.png" width="150"><img src="Anleitungen/assets/WLANGuide7.png" width="150">
